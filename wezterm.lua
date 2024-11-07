@@ -72,5 +72,14 @@ for i = 1, 8 do
     })
 end
 
+-- Nushell configuration
+config.default_prog = {
+    "/opt/homebrew/bin/nu",
+    "--env-config",
+    "~/.config/nushell/env.nu",
+    "--config",
+    "~/.config/nushell/config.nu",
+}
+
 -- Return the final configuration
 return config
