@@ -61,7 +61,7 @@ config.window_padding = { left = 5, right = 5, top = 5, bottom = 5 }
 config.send_composed_key_when_left_alt_is_pressed = true
 config.send_composed_key_when_right_alt_is_pressed = true
 config.max_fps = 120
-config.animation_fps = 20
+config.animation_fps = 60
 
 -- Moving tabs
 config.keys = {}
