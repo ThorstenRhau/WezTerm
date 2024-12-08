@@ -31,7 +31,7 @@ config.font = wezterm.font_with_fallback({
 })
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
-config.color_scheme_dirs = { "~/git/catppuccin-wezterm/dist" }
+config.color_scheme_dirs = { "~/.config/wezterm/themes" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
