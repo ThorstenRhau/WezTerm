@@ -11,7 +11,7 @@ local function light_or_dark(appearance)
         return "tokyonight_night"
     else
         -- Light theme
-        return "itokyonight_day"
+        return "tokyonight_day"
     end
 end
 
