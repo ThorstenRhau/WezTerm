@@ -75,7 +75,7 @@ for i = 1, 8 do
 end
 
 -- Spawn a fish shell in login mode
-config.default_prog = { "/opt/homebrew/bin/fish", "--login" }
+-- config.default_prog = { "/opt/homebrew/bin/fish", "--login" }
 
 -- Return the final configuration
 return config
