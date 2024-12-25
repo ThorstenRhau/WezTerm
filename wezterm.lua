@@ -15,19 +15,14 @@ local function light_or_dark(appearance)
     end
 end
 
--- [[ PragmataPro ]] --
---  https://fsd.it/pragmatapro/Handbook.png
 config.font = wezterm.font_with_fallback({
     {
-        family = "PragmataPro Liga",
+        family = "Iosevka Custom", -- https://github.com/ThorstenRhau/Iosevka
         weight = "Regular",
-        harfbuzz_features = {
-            "calt", -- Ligatures !=
-            "ss13", -- Better git tree lines
-        },
     },
-    { family = "Symbols Nerd Font", weight = "Regular" },
-    { family = "Noto Color Emoji", weight = "Regular" },
+    { family = "Symbols Nerd Font", weight = "Regular", scale = 1.0 },
+    { family = "Apple Color Emoji", weight = "Regular", scale = 1.0 }, -- 😎
+    { family = "Noto Color Emoji", weight = "Regular", scale = 1.0 }, -- 😎
 })
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
@@ -73,9 +68,6 @@ for i = 1, 8 do
         action = wezterm.action.MoveTab(i - 1),
     })
 end
-
--- Spawn a fish shell in login mode
--- config.default_prog = { "/opt/homebrew/bin/fish", "--login" }
 
 -- Return the final configuration
 return config
