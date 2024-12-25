@@ -35,7 +35,7 @@ config.color_scheme_dirs = { "~/.config/wezterm/themes" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
 
-config.font_size = 14
+config.font_size = 13
 config.bold_brightens_ansi_colors = true
 
 -- Cursor config
