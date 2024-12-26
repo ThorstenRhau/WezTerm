@@ -49,7 +49,8 @@ config.font = wezterm.font_with_fallback({
         },
     },
     { family = "Symbols Nerd Font", weight = "Regular", scale = 0.9 },
-    { family = "Noto Color Emoji", weight = "Regular" }, -- 😎
+    { family = "Apple Color Emoji" }, -- 😎
+    { family = "Noto Color Emoji" }, -- 😎
 })
 config.font_size = 14
 config.bold_brightens_ansi_colors = true
