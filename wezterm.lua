@@ -19,7 +19,7 @@ end
 --  https://fsd.it/pragmatapro/Handbook.png
 config.font = wezterm.font_with_fallback({
     {
-        family = "PragmataPro Liga",
+        family = "PragmataPro Mono Liga",
         weight = "Regular",
         harfbuzz_features = {
             "calt", -- Ligatures !=
