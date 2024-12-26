@@ -15,28 +15,49 @@ local function light_or_dark(appearance)
     end
 end
 
--- [[ PragmataPro ]] --
---  https://fsd.it/pragmatapro/Handbook.png
 config.font = wezterm.font_with_fallback({
     {
-        family = "PragmataPro Mono Liga",
-        weight = "Regular",
+        family = "Iosevka Custom",
+        weight = 450,
         harfbuzz_features = {
-            "calt", -- Ligatures !=
-            "ss13", -- Better git tree lines
+            -- All the features can be found here: https://typeof.net/Iosevka/
+            "calt=1", -- Ligatures like != -> ==>
+            "dlig=1", -- Discretionary ligatures
+
+            -- Style sets, only one can be enabled (1) at a time
+            -- Disable all to get the default look and feel
+            "ss01=0", -- Andale Mono
+            "ss02=0", -- Anonymous Pro
+            "ss03=0", -- Consolas
+            "ss04=0", -- Menlo
+            "ss05=0", -- Fira Mono
+            "ss06=0", -- Liberation Mono
+            "ss07=0", -- Monaco
+            "ss08=0", -- Pragmata Pro
+            "ss09=0", -- Source Code Pro
+            "ss10=0", -- Envy Code R
+            "ss11=0", -- X Window Style
+            "ss12=0", -- Ubuntu Mono
+            "ss13=0", -- Lucida
+            "ss14=0", -- JetBrains Mono
+            "ss15=0", -- IBM Plex Mono
+            "ss16=0", -- PT Mono
+            "ss17=0", -- Recursive Mono
+            "ss18=0", -- Input Mono
+            -- 19 seems to be missing for some reason unknown to me
+            "ss20=0", -- Curly Style
         },
     },
     { family = "Symbols Nerd Font", weight = "Regular" },
     { family = "Noto Color Emoji", weight = "Regular" },
 })
+config.font_size = 14
+config.bold_brightens_ansi_colors = true
 
 -- Detect current appearance and apply the corresponding color scheme and tab style
 config.color_scheme_dirs = { "~/.config/wezterm/themes" }
 local appearance = wezterm.gui.get_appearance()
 config.color_scheme = light_or_dark(appearance)
-
-config.font_size = 14
-config.bold_brightens_ansi_colors = true
 
 -- Cursor config
 config.default_cursor_style = "SteadyBlock"
